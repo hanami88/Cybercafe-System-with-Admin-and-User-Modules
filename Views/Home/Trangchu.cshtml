@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/index.css?v=@DateTime.Now.Ticks" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box-container">
+        <div class="box-login">
+          <h3 class="text">Đăng Nhập</h3>
+          <form action="/Home/Trangchu" class="form-lg" method="post">
+            <input type="text" name="Tendangnhap" id="" placeholder="Tên đăng nhập" />
+            <input type="password" name="matkhau" id="" placeholder="Mật khẩu" />
+            <div class="check">
+              <a href="/Home/Dangky">Đăng Ký</a>
+              @if(ViewBag.check==true){
+                  <div class="error">Sai tài khoản hoặc mật khẩu!</div>
+              }
+            </div>
+            <button type="submit" class="btn-submit">Đăng Nhập</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

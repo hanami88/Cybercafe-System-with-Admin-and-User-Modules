@@ -1,0 +1,60 @@
+@model List<netmvc.Models.TaiKhoan>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/quanlynguoidung.css?v=@DateTime.Now.Ticks" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nagavi">
+        <h1>Admin</h1>
+          <a href="/Home/Quanly">Quản lý máy</a>
+        <a href="/Home/Quanlynguoidung">Quản lý tài khoản</a>
+      </div>
+      <h1 class="text">Thông Tin Người Dùng</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tendangnhap</th>
+            <th>Họ tên</th>
+            <th>Số điện thoại</th>
+            <th>Số dư</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach(var i in @Model){
+          <tr>
+            <td>@i.ID</td>
+            <td>@i.Tendangnhap</td>
+            <td>@i.Hoten</td>
+            <td>@i.SDT</td>
+            <td>@i.Sodu</td>
+            <td>
+              <form action="/Home/Suathongtinnguoidungtmp"  method="post" style="display:inline;">
+             <input type="hidden" name="ID" value="@i.ID" />
+             <button type="submit">Sửa</button>
+             </form>
+             <form action="/Home/Deletenguoidung"  method="post" style="display:inline;">
+             <input type="hidden" name="ID" value="@i.ID" />
+             <button type="submit">Xóa</button>
+             </form>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/choigame.css?v=@DateTime.Now.Ticks" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choi Game</title>
+</head>
+<body>
+@{
+    var soDuString = (ViewBag.SoDuNguoiDung ?? "0").ToString().Replace(".", "").Replace(",", "").Trim();
+    long soDu = 0;
+    long.TryParse(soDuString, out soDu);
+    var donGiaString = (ViewBag.DonGiaMayTinh ?? "0").ToString().Replace(".", "").Replace(",", "").Replace("d/h", "").Trim();
+    long donGia = 0;
+    long.TryParse(donGiaString, out donGia);
+    double tongGio = 0;
+    if (donGia != 0)
+    {
+        tongGio = (double)soDu / donGia;
+    }
+    int gio = (int)tongGio;
+    int phut = (int)((tongGio - gio) * 60);
+    var tongThoiGianString = $"{gio:D2}:{phut:D2}";
+    int tongGiay = (int)(tongGio * 3600);
+    var gioBatDau = ViewBag.GioBatDau as DateTime? ?? DateTime.Now;
+}
+<form action="/Home/KetThucSuDung" method="post">
+    <input type="hidden" name="IDnguoidung" value="@ViewBag.IDnguoichoi" >
+    <input type="hidden" name="IDmaytinh" value="@ViewBag.IDmaytinh">
+    <div class="tinh-tien-panel">
+        <div class="status-bar">
+            <span>ADMIN</span>
+            <span class="connected">Đã kết nối <span class="dot-online"></span></span>
+        </div>
+        <div class="time-info">
+            <label>Thời gian hiện tại:</label>
+            <input type="text" readonly id="currentTime" value="00:00:00" />
+            <label>Tổng thời gian:</label>
+            <input type="text" readonly value="@tongThoiGianString" />
+            <label>Thời gian sử dụng:</label>
+            <input type="text" readonly value="00:00" id="timeUsed" />
+            <label>Thời gian còn lại:</label>
+            <input type="text" readonly value="00:00" id="timeLeft" />
+            <textarea readonly placeholder="Ghi chú..."></textarea>
+        </div>
+        <div class="actions">
+            <button type="button">Tra Nhắn</button>
+            <button type="button">Dịch Vụ</button>
+            <button type="submit">Đăng Xuất</button>
+            <button type="button">Mật Khẩu</button>
+            <button type="button">Khóa Máy</button>
+            <button type="button">Tiện Ích</button>
+        </div>
+        <div class="footer">
+            <button type="button" class="settings">Tùy Chọn</button>
+            <button type="button" class="logout">Thoát</button>
+        </div>
+        <div class="logo">
+            <img src="/images/logo.png" alt="GCafe Logo" class="logo" />
+        </div>
+        <div class="bottom-options">
+            <select>
+                <option>Tiếng Việt</option>
+                <option>English</option>
+            </select>
+        </div>
+    </div>
+</form>
+<script >
+let gioBatDau = new Date("@gioBatDau.ToString("yyyy/MM/dd HH:mm:ss")");
+    let tongGiay = @tongGiay;
+    function updateTime() {
+        let now = new Date();
+        let hours = now.getHours().toString().padStart(2, '0');
+        let minutes = now.getMinutes().toString().padStart(2, '0');
+        let seconds = now.getSeconds().toString().padStart(2, '0');
+        document.getElementById("currentTime").value = `${hours}:${minutes}:${seconds}`;
+        let elapsedSeconds = Math.floor((now - gioBatDau) / 1000);
+        let usedHours = Math.floor(elapsedSeconds / 3600);
+        let usedMinutes = Math.floor((elapsedSeconds % 3600) / 60);
+        document.getElementById("timeUsed").value = `${usedHours.toString().padStart(2, '0')}:${usedMinutes.toString().padStart(2, '0')}`;
+        let remainingSeconds = tongGiay - elapsedSeconds;
+        if (remainingSeconds < 0) remainingSeconds = 0;
+        let leftHours = Math.floor(remainingSeconds / 3600);
+        let leftMinutes = Math.floor((remainingSeconds % 3600) / 60);
+        document.getElementById("timeLeft").value = `${leftHours.toString().padStart(2, '0')}:${leftMinutes.toString().padStart(2, '0')}`;
+        if (remainingSeconds === 0) {
+    setTimeout(function() {
+        var idNguoiChoi = "@ViewBag.IDnguoichoi";
+        var idMayTinh = "@ViewBag.IDmaytinh";
+        var form = document.createElement("form");
+        form.method = "post";
+        form.action = "/Home/KetThucSuDung";
+        var inputNguoiDung = document.createElement("input");
+        inputNguoiDung.type = "hidden";
+        inputNguoiDung.name = "IDnguoidung";
+        inputNguoiDung.value = idNguoiChoi;
+        form.appendChild(inputNguoiDung);
+        var inputMayTinh = document.createElement("input");
+        inputMayTinh.type = "hidden";
+        inputMayTinh.name = "IDmaytinh";
+        inputMayTinh.value = idMayTinh;
+        form.appendChild(inputMayTinh);
+        document.body.appendChild(form);
+        form.submit(); 
+    }, 1000);
+    }
+    }
+    setInterval(updateTime, 1000); 
+</script>
+</body>
+</html>

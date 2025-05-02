@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/admin/netmvc/wwwroot/css/choigame.css",
+      "PackagePath": "staticwebassets/css/choigame.css"
+    },
+    {
+      "Id": "/Users/admin/netmvc/wwwroot/css/dangky.css",
+      "PackagePath": "staticwebassets/css/dangky.css"
+    },
+    {
+      "Id": "/Users/admin/netmvc/wwwroot/css/index.css",
+      "PackagePath": "staticwebassets/css/index.css"
+    },
+    {
+      "Id": "/Users/admin/netmvc/wwwroot/css/nguoidung.css",
+      "PackagePath": "staticwebassets/css/nguoidung.css"
+    },
+    {
+      "Id": "/Users/admin/netmvc/wwwroot/css/quanly.css",
+      "PackagePath": "staticwebassets/css/quanly.css"
+    },
+    {
+      "Id": "/Users/admin/netmvc/wwwroot/css/quanlynguoidung.css",
+      "PackagePath": "staticwebassets/css/quanlynguoidung.css"
+    },
+    {
+      "Id": "/Users/admin/netmvc/wwwroot/css/reset.css",
+      "PackagePath": "staticwebassets/css/reset.css"
+    },
+    {
+      "Id": "/Users/admin/netmvc/wwwroot/images/cc.jpg",
+      "PackagePath": "staticwebassets/images/cc.jpg"
+    },
+    {
+      "Id": "/Users/admin/netmvc/wwwroot/images/choigame.jpg",
+      "PackagePath": "staticwebassets/images/choigame.jpg"
+    },
+    {
+      "Id": "/Users/admin/netmvc/wwwroot/images/hinhnen.jpg",
+      "PackagePath": "staticwebassets/images/hinhnen.jpg"
+    },
+    {
+      "Id": "/Users/admin/netmvc/wwwroot/images/hinhnenw7.jpg",
+      "PackagePath": "staticwebassets/images/hinhnenw7.jpg"
+    },
+    {
+      "Id": "/Users/admin/netmvc/wwwroot/images/logo.jpeg",
+      "PackagePath": "staticwebassets/images/logo.jpeg"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.netmvc.props",
+      "PackagePath": "build\\netmvc.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.netmvc.props",
+      "PackagePath": "buildMultiTargeting\\netmvc.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.netmvc.props",
+      "PackagePath": "buildTransitive\\netmvc.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.netmvc.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

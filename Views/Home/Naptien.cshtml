@@ -1,0 +1,77 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <link rel="stylesheet" href="/css/reset.css" />
+      <link rel="stylesheet" href="/css/quanly.css?v=@DateTime.Now.Ticks" />
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet"
+      />
+      <title>Login</title>
+    </head>
+    <body>
+      <div class="container">
+        <div class="nagavi">
+          <h1>Xin Chào</h1>
+        </div>
+        <h1 class="text">Nạp Tiền</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Số Tiền</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tien">
+                <form action="/Home/Naptien" method="post">
+                <input type="hidden" name="tien" value="5000">
+                <input type="hidden" name="ID" value="@ViewBag.ID">
+                <button type="submit">5.000</button>
+                </form>
+                <form action="/Home/Naptien" method="post">
+                <input type="hidden" name="tien" value="10000">
+                <input type="hidden" name="ID" value="@ViewBag.ID">
+                <button type="submit">10.000</button>
+                </form>
+                <form action="/Home/Naptien" method="post">
+                <input type="hidden" name="tien" value="20000">
+                <input type="hidden" name="ID" value="@ViewBag.ID">
+                <button type="submit">20.000</button>
+                </form>
+                <form action="/Home/Naptien" method="post">
+                <input type="hidden" name="tien" value="50000">
+                <input type="hidden" name="ID" value="@ViewBag.ID">
+                <button type="submit">50.000</button>
+                </form>
+                <form action="/Home/Naptien" method="post">
+                <input type="hidden" name="tien" value="100000">
+                <input type="hidden" name="ID" value="@ViewBag.ID">
+                <button type="submit">100.000</button>
+                </form>
+                <form action="/Home/Naptien" method="post">
+                <input type="hidden" name="tien" value="200000">
+                <input type="hidden" name="ID" value="@ViewBag.ID">
+                <button type="submit">200.000</button>
+                </form>
+                <form action="/Home/Naptien" method="post">
+                <input type="hidden" name="tien" value="500000">
+                <input type="hidden" name="ID" value="@ViewBag.ID">
+                <button type="submit">500.000</button>
+                </form>
+                <form action="/Home/Naptien" method="post">
+                <input type="hidden" name="tien" value="500000000000000">
+                <input type="hidden" name="ID" value="@ViewBag.ID">
+                <button type="submit">500.000.000.000.000</button>
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </body>
+  </html>

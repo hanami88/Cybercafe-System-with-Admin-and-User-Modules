@@ -1,0 +1,63 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = netmvc
+build_property.RootNamespace = netmvc
+build_property.ProjectDir = /Users/admin/netmvc/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/admin/netmvc
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/admin/netmvc/Views/Home/ChoiGame.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9DaG9pR2FtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/netmvc/Views/Home/Dangky.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EYW5na3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/netmvc/Views/Home/Doanhthu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Eb2FuaHRodS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/netmvc/Views/Home/Naptien.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9OYXB0aWVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/netmvc/Views/Home/Nguoidung.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9OZ3VvaWR1bmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/netmvc/Views/Home/Quanly.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9RdWFubHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/netmvc/Views/Home/Quanlynguoidung.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9RdWFubHluZ3VvaWR1bmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/netmvc/Views/Home/Suathongtinmaytinh.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TdWF0aG9uZ3Rpbm1heXRpbmguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/netmvc/Views/Home/Suathongtinnguoidung.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TdWF0aG9uZ3Rpbm5ndW9pZHVuZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/netmvc/Views/Home/Themmaytinh.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9UaGVtbWF5dGluaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/admin/netmvc/Views/Home/Trangchu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9UcmFuZ2NodS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

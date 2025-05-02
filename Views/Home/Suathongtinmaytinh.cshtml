@@ -1,0 +1,66 @@
+@model List<netmvc.Models.MayTinh>;
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/quanly.css?v=@DateTime.Now.Ticks" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    @{
+      int viewBagId = Convert.ToInt32(ViewBag.ID ?? "0");
+      string tenmay=" ";
+      string dongia=" ";
+      foreach(var i in @Model){
+        if(i.ID==viewBagId){
+             tenmay=i.Tenmay;
+             dongia=i.dongia;
+        }
+      }
+    }
+    <div class="container">
+      <div class="nagavi">
+        <h1>Admin</h1>
+        <a href="/Home/Quanly">Quản lý máy</a>
+        <a href="/Home/Quanlynguoidung">Quản lý tài khoản</a>
+      </div>
+      <h1 class="text">Sửa Thông Tin Máy Tính</h1>
+      <div class="error">@ViewBag.error</div>
+      <table>
+        <thead>
+          <tr>
+             <th>ID</th>
+            <th>Tên máy</th>
+            <th>Đơn giá</th>
+            <th>Sửa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <form
+            action="/Home/Suathongtinmaytinh"
+            method="post"
+            style="display: inline"
+          >
+            <tr>
+              <input type="hidden" name="ID" id="" value="@ViewBag.ID"/>
+              <td><div>@ViewBag.ID</div></td>
+              <td><input type="text" name="Tenmay" id="" placeholder="@tenmay"/></td>
+              <td><input type="text" name="dongia" id="" placeholder="@dongia"/></td>
+              <td>
+                <button type="submit">Sửa</button>
+            </td>
+            </tr>
+          </form>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

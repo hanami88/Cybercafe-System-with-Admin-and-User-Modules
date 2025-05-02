@@ -1,0 +1,101 @@
+html {
+  font-family: Roboto;
+}
+
+.container {
+  width: 100%;
+  height: 693px;
+}
+.nagavi {
+  display: flex;
+  align-items: center;
+  background-color: #27a4f2;
+}
+.nagavi > :nth-child(1) {
+  margin-left: 30px;
+  font-size: 50px;
+  color: white;
+}
+.nagavi > :nth-child(2) {
+  margin-left: 100px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: rgb(181, 181, 181);
+  }
+}
+.nagavi > :nth-child(3) {
+  margin-left: 50px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: rgb(181, 181, 181);
+  }
+}
+
+.text {
+  margin-top: 30px;
+  font-size: 40px;
+  margin-left: 20px;
+}
+.them {
+  margin-left: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+.error {
+  color: red;
+  font-size: 20px;
+  margin-left: 20px;
+}
+button {
+  cursor: pointer;
+}
+.nagavi > :nth-child(2) {
+  padding-left: 700px;
+  font-size: 20px;
+  color: white;
+}
+.tien {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+}
+.hettien {
+  margin-left: 1000px;
+  color: red;
+}
+button {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: #0088dc;
+  font-weight: 600;
+  cursor: pointer;
+  &:hover {
+    background-color: #00578e;
+    color: white;
+  }
+}

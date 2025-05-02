@@ -1,0 +1,86 @@
+html {
+  font-family: Roboto;
+}
+
+body {
+  background-size: 100%;
+  background-image: url(/images/cc.jpg);
+}
+
+.container {
+  width: 100%;
+  height: 680px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-container {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid rgb(130, 130, 130);
+}
+.box-login {
+  width: 350px;
+  height: 300px;
+}
+.form-lg {
+  display: flex;
+  flex-direction: column;
+}
+.text {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 115px;
+}
+.form-lg > :nth-child(1) {
+  width: 290px;
+  height: 35px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1.5px solid gray;
+}
+.form-lg > :nth-child(2) {
+  width: 290px;
+  height: 35px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1.5px solid gray;
+}
+.check {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.btn-submit {
+  width: 140px;
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ee9ca7;
+  color: aliceblue;
+  font-weight: 600;
+  margin-left: 110px;
+  &:hover {
+    background-color: #ff7e8f;
+    cursor: pointer;
+  }
+}
+.error {
+  color: red;
+  font-size: 15px;
+}
+.check > :nth-child(1) {
+  &:hover {
+    color: blue;
+  }
+}
